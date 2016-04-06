@@ -1,7 +1,9 @@
 *.synctex.gz
+*.backup
 *.pdf
 *.aux
 *.bbl
 *.blg
 *.log
+*.sh
 *~

@@ -122,3 +122,37 @@ através do \textit{Document Object Model} (DOM). Toda transição de páginas n
 da adoção deste modelo em relação ao modelo anterior é em relação ao overhead de requisições, o que torna a aplicação mais leve e permite melhor 
 usabilidade para o usuário final, devido ao AJAX não bloquear a manipulação da página durante sua execução \cite{spa01}, além de facilitar a 
 portabilidade da aplicação pois este modelo requer uma API \textit{server-side} robusta e bem estruturada para funcionar.
+
+\section{\esp Ferramentas e Metodologia}
+Para o desenvolvimento do Ciclotour, foi utilizado o estilo arquitetural RESTful, sendo este sistema contruído como uma SPA. Desta forma, há
+uma separação completa das responsabilidades entre cliente e servidor, onde a responsabilidade de composição das páginas é delegada ao browser
+executado \textit{client-side} e o servidor passa a atuar apenas como um repositório dos dados pertinentes à aplicação. A Figura 
+\ref{fig:estruturaCiclotour} demonstra a estrutura simplificada entre cliente e servidor da aplicação Ciclotour, e as tecnologias utilizadas para
+a construção do sistema.
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Estrutura simplificada entre cliente e servidor da aplicação Ciclotour.]{Estrutura simplificada entre cliente e servidor da aplicação Ciclotour}
+	  \vspace{-0.4cm}
+	\includegraphics[width=.8\textwidth]{figuras/estruturaCiclotour.png}
+	 \vspace{-0.3cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:estruturaCiclotour}
+\end{figure}
+
+\subsection{Servidor}
+Para desenvolver o \textit{server-side} da aplicação Ciclotour foram utilizados o framework Python de desenvolvimento web Django com a extensão 
+Django REST Framework para construção de \textit{Web Services}. O Django utiliza um estilo arquitetural baseado no \textit{Model-View-Controller}
+(MVC), o \textit{Model-View-Template} (MVT). Na aplicação Ciclotour o Django é responsável por processar a solicitação inicial onde a página
+contendo todos os scripts necessários para a aplicação é devolvida como resposta para o solicitante, manter uma interface de administração do sistema
+e manter os modelos do sistema através de seu \textit{Object-relational mapping} (ORM). As requisições posteriores enviadas ao servidor serão 
+requisições de dados que serão processadas e respondidas pelo Django REST framework em formato \textit{JavaScript Object Notation} (JSON).
+
+\subsection{Cliente}
+Para desenvolver o \textit{client-side} da aplicação Ciclotour foram utilizados o framework JavaScript AngularJS e o framework CSS Bootsrap. O 
+AngularJS tem como propósito permitir a construção de elementos \textit{client-side} de forma declarativa, através de suas diretivas. Este framework 
+também adota o estilo arquitetural MVC, além de prover uma abstração para as chamadas AJAX e atualização em tempo real do 
+\textit{Document Object Model} (DOM) através do \textit{Two-way Data Binding}, o que promove uma melhor organização do projeto que por se tratar de
+uma SPA, possui alto grau de complexidade em seus scripts. Devido à esta facilidade oferecida pelo framework, o AngularJS foi utilizado desenvolver 
+de todos os scripts \textit{client-side} da aplicação Ciclotour. O Bootstrap foi utilizado com o intuito de oferecer uma interface rica e com design
+responsivo para promover melhor usabilidade e experiência por parte do usuário final do sistema.

@@ -52,7 +52,7 @@ exigissem uma forma melhor de interagir com estas aplicações.
 
 Para solucionar este problema de desempenho presente nas aplicações tradicionais, surgiu o Ajax. Como descrito por \cite{garrettAjax}, uma aplicação
 Ajax elimina a natureza de interação Web conhecida como \textit{start-stop-start-stop} introduzindo uma camada intermediária — Ajax engine — entre 
-cliente e servidor. Essa camada que permitiu à essas aplicações realizarem requisições ao servidor de forma assíncrona e atualizar parcialmente a 
+cliente e servidor. Essa camada permitiu à essas aplicações realizarem requisições ao servidor de forma assíncrona e atualizar parcialmente a 
 página ao receber a resposta, não impedindo a interação do usuário durante o ciclo de requisição/resposta. Abaixo na Figura \ref{fig:ajax_comparison} 
 podemos ver um comparativo entre aplicações web síncronas e assíncronas.
 
@@ -98,12 +98,12 @@ Podemos ver na Tabela \ref{tab:tabela1} o mapeamento de verbos HTTP com as açõ
 \end{table}
 
 Devido à este aprimoramento constante no que diz respeito ao desenvolvimento de aplicações web, a arquitetura de uma aplicação web está deixando 
-de ser composta por grandes quantidades de códigos server-side, onde todo o processamento é feito no servidor, os códigos são fechados e o consumo 
-de banda é maior aos proprietários do sistema, e passando a ter maior utilização de códigos client-side, onde o processamento dos scripts da página
-ocorre na máquina do cliente e somente quando há necessidade de interação com o banco de dados são feitas requisições ao servidor \cite{spa01}. Neste 
-contexto surgiram as \textit{Single Page Applications} (SPA) definida por \cite{spa02} aplicações compota por somente uma pagina HTML, como base para 
-todas as outras páginas web da aplicação nas quais as interações feitas pelo usuário são implementadas usando JavaScript, HTML e CSS. A Figura 
-\ref{fig:spa} demonstra o funcionamento de uma SPA.
+de ser composta por grandes quantidades de códigos \textit{server-side}, onde todo o processamento é feito no servidor, os códigos são fechados e 
+o consumo de banda é maior aos proprietários do sistema, e passando a ter maior utilização de códigos \textit{client-side}, onde o processamento dos 
+scripts da página ocorre na máquina do cliente e somente quando há necessidade de interação com o banco de dados são feitas requisições ao servidor 
+\cite{spa01}. Neste contexto surgiram as \textit{Single Page Applications} (SPA) definida por \cite{spa02} aplicações compota por somente uma 
+pagina HTML, como base para todas as outras páginas web da aplicação nas quais as interações feitas pelo usuário são implementadas usando JavaScript,
+HTML e CSS. A Figura \ref{fig:spa} demonstra o funcionamento de uma SPA.
 
 \begin{figure}[!ht]
 	\centering	
@@ -121,4 +121,4 @@ comunicação é feita através de requisições AJAX, e os scripts presentes na
 através do \textit{Document Object Model} (DOM). Toda transição de páginas neste tipo de aplicação é realizada \textit{client-side}. Uma das vantagens
 da adoção deste modelo em relação ao modelo anterior é em relação ao overhead de requisições, o que torna a aplicação mais leve e permite melhor 
 usabilidade para o usuário final, devido ao AJAX não bloquear a manipulação da página durante sua execução \cite{spa01}, além de facilitar a 
-portabilidade da aplicação pois este modelo requer uma API \textit{server-side} bem estruturada para funcionar.
+portabilidade da aplicação pois este modelo requer uma API \textit{server-side} robusta e bem estruturada para funcionar.

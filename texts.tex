@@ -1,8 +1,8 @@
 \section{\esp Introdução}
-Com a mudança de mentalidade da Web 1.0 para o novo paradgma de aplicações web conhecido como Web 2.0 proposta por \cite{web20Proposta}, seus 
+Com a mudança de mentalidade da Web para o novo paradgma de aplicações web conhecido como Web 2.0 proposta por \cite{web20Proposta}, seus 
 usuários deixaram de ter um papel passivo como consumidores de conteúdo para assumir um papel ativo de produtores de conteúdo. Esta mudança 
 trouxe consigo ferramentas interativas, que tem como foco principal a geração de conteúdo por parte dos próprios usuários, tais como fóruns 
-de discursões e recentemente, as redes sociais como o Twitter, Facebook e o Instagram.
+de discussões e recentemente, as redes sociais como o Twitter, Facebook e o Instagram.
 
 Esta participação ativa dos usuários impactou singnificativamente a quantidade de informação disponíveis na Web. Segundo \cite{artigo01}, 
 o tráfego de dados nesta rede dobra a cada ano, o que gera uma quantidade massiva de informação, tornando a Web muito influente em diversos 
@@ -32,7 +32,7 @@ de forma colaborativa, com o propósito de criar um grande repositório de infor
 atividade turística.
 
 \section{\esp Referencial Teórico}
-No princípio das aplicações web, devido ao seu comportamento síncrono, as mesmas ficaram para trás em relação à aplicações desktop, pois a interação 
+No princípio das aplicações Web, devido ao seu comportamento síncrono, as mesmas ficaram para trás em relação à aplicações desktop, pois a interação 
 com essas aplicações resultava em um longo período de espera conforme descreve \cite{deitelAjax}. Este atraso era causado devido à grande quantidade 
 de atualizações de páginas inteiras necessárias no ciclo síncrono, demonstrado na Figura \ref{fig:arquitetura_web_tradicional} abaixo: 
 
@@ -54,11 +54,11 @@ Para solucionar este problema de desempenho presente nas aplicações tradiciona
 Ajax elimina a natureza de interação Web conhecida como \textit{start-stop-start-stop} introduzindo uma camada intermediária — Ajax engine — entre 
 cliente e servidor. Essa camada permitiu à essas aplicações realizarem requisições ao servidor de forma assíncrona e atualizar parcialmente a 
 página ao receber a resposta, não impedindo a interação do usuário durante o ciclo de requisição/resposta. Abaixo na Figura \ref{fig:ajax_comparison} 
-podemos ver um comparativo entre aplicações web síncronas e assíncronas.
+podemos ver um comparativo entre aplicações Web síncronas e assíncronas.
 
 \begin{figure}[!ht]
 	\centering	
-	\caption[\hspace{0.1cm}Comparação aplicação web clássica e aplicação web com Ajax.]{Comparação aplicação web clássica e aplicação web com Ajax}
+	\caption[\hspace{0.1cm}Comparação aplicação Web clássica e aplicação Web com Ajax.]{Comparação aplicação Web clássica e aplicação Web com Ajax}
 	  \vspace{-0.4cm}
 	\includegraphics[width=.8\textwidth]{figuras/ajax_comparison.png}
 	 \vspace{-0.3cm}
@@ -67,8 +67,8 @@ podemos ver um comparativo entre aplicações web síncronas e assíncronas.
 \end{figure}
 
 
-Com aplicações construídas utilizando Ajax, a Web voltou à ser atrativa para usuário e tem crescido o número de aplicações web desde então. Segundo
-\cite{tabulaRest} as aplicações web assumem atualmente uma importância sem precedentes em todas as áreas da sociedade. Em \cite{fieldingRest} foi apresentado o Representational State Transfer (REST) 
+Com aplicações construídas utilizando Ajax, a Web voltou à ser atrativa para usuário e tem crescido o número de aplicações Web desde então. Segundo
+\cite{tabulaRest} as aplicações Web assumem atualmente uma importância sem precedentes em todas as áreas da sociedade. Em \cite{fieldingRest} foi apresentado o Representational State Transfer (REST) 
 como um estilo arquitetural para sistemas de hipermídia distribuídos baseado no \textit{HyperText Transfer Protocol} (HTTP). Segundo 
 \cite{modelingRestful}, o entendimento do REST pode ajudar na obtenção de uma melhor performace e escalabilidade, bem como diminuir o acoplamento,
 como resultado aumentando a interoperabilidade, promovendo o reuso. Aplicações que seguem as restrições REST são denominadas como RESTful, estas 
@@ -97,12 +97,12 @@ Podemos ver na Tabela \ref{tab:tabela1} o mapeamento de verbos HTTP com as açõ
 	{\footnotesize\\ \textbf{Fonte: Elaborado pelo autor}}
 \end{table}
 
-Devido à este aprimoramento constante no que diz respeito ao desenvolvimento de aplicações web, a arquitetura de uma aplicação web está deixando 
+Devido à este aprimoramento constante no que diz respeito ao desenvolvimento de aplicações Web, a arquitetura de uma aplicação Web está deixando 
 de ser composta por grandes quantidades de códigos \textit{server-side}, onde todo o processamento é feito no servidor, os códigos são fechados e 
 o consumo de banda é maior aos proprietários do sistema, e passando a ter maior utilização de códigos \textit{client-side}, onde o processamento dos 
 scripts da página ocorre na máquina do cliente e somente quando há necessidade de interação com o banco de dados são feitas requisições ao servidor 
 \cite{spa01}. Neste contexto surgiram as \textit{Single Page Applications} (SPA) definida por \cite{spa02} aplicações compota por somente uma 
-pagina HTML, como base para todas as outras páginas web da aplicação nas quais as interações feitas pelo usuário são implementadas usando JavaScript,
+pagina HTML, como base para todas as outras páginas Web da aplicação nas quais as interações feitas pelo usuário são implementadas usando JavaScript,
 HTML e CSS. A Figura \ref{fig:spa} demonstra o funcionamento de uma SPA.
 
 \begin{figure}[!ht]
@@ -141,7 +141,7 @@ a construção do sistema.
 \end{figure}
 
 \subsection{Servidor}
-Para desenvolver o \textit{server-side} da aplicação Ciclotour foram utilizados o framework Python de desenvolvimento web Django com a extensão 
+Para desenvolver o \textit{server-side} da aplicação Ciclotour foram utilizados o framework Python de desenvolvimento Web Django com a extensão 
 Django REST Framework para construção de \textit{Web Services}. O Django utiliza um estilo arquitetural baseado no \textit{Model-View-Controller}
 (MVC), o \textit{Model-View-Template} (MVT). Na aplicação Ciclotour o Django é responsável por processar a solicitação inicial onde a página
 contendo todos os scripts necessários para a aplicação é devolvida como resposta para o solicitante, manter uma interface de administração do sistema

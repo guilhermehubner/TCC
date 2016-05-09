@@ -35,9 +35,9 @@ de criar um grande repositório de informações relevantes para cicloturistas a
 praticantes e promoção da prática.
 
 \section{\esp Referencial Teórico}
-No princípio das aplicações Web, devido ao seu comportamento síncrono, as mesmas ficaram para trás em relação à aplicações desktop, pois a interação 
-com essas aplicações resultava em um longo período de espera conforme descreve \cite{deitelAjax}. Este atraso era causado devido à grande quantidade 
-de atualizações de páginas inteiras necessárias no ciclo síncrono, demonstrado na Figura \ref{fig:arquitetura_web_tradicional} abaixo: 
+No princípio das aplicações Web, devido ao seu comportamento síncrono, as mesmas ficaram para trás em relação a aplicações \textit{desktop}, pois a 
+interação com essas aplicações resultava em um longo período de espera conforme descreve \cite{deitelAjax}. Este atraso era causado devido à grande 
+quantidade de atualizações de páginas inteiras necessárias no ciclo síncrono, demonstrado na Figura \ref{fig:arquitetura_web_tradicional}. 
 
 \begin{figure}[!ht]
 	\centering	
@@ -50,20 +50,20 @@ de atualizações de páginas inteiras necessárias no ciclo síncrono, demonstr
 \end{figure}
 
 Cada recarga na página gerava uma nova requisição ao servidor, que neste modelo é responsável por processar a requisição, gerar e enviar a resposta 
-contendo a página exata que será exibida no browser do cliente. Esse delay presente nas interações com a aplicação fizeram com que os usuários 
-exigissem uma forma melhor de interagir com estas aplicações. 
+contendo a página exata que será exibida no \textit{browser} do cliente. Esse \textit{delay} presente nas interações com a aplicação fizeram com que 
+os usuários exigissem uma forma melhor de interagir com estas aplicações. 
 
-Para solucionar este problema de desempenho presente nas aplicações tradicionais, surgiu o Ajax. Como descrito por \cite{garrettAjax}, uma aplicação
-Ajax elimina a natureza de interação Web conhecida como \textit{start-stop-start-stop} introduzindo uma camada intermediária — Ajax engine — entre 
-cliente e servidor. Essa camada permitiu à essas aplicações realizarem requisições ao servidor de forma assíncrona e atualizar parcialmente a 
-página ao receber a resposta, não impedindo a interação do usuário durante o ciclo de requisição/resposta. Abaixo na Figura \ref{fig:ajax_comparison} 
-podemos ver um comparativo entre aplicações Web síncronas e assíncronas.
+Para solucionar este problema de desempenho presente nas aplicações tradicionais, surgiu o modelo Ajax. Como descrito por \cite{garrettAjax}, uma 
+aplicação Ajax elimina a natureza de interação Web conhecida como \textit{start-stop-start-stop} introduzindo uma camada intermediária 
+— \textit{Ajax Engine} — entre cliente e servidor. Essa camada permitiu a essas aplicações realizarem requisições ao servidor de forma assíncrona 
+e atualizar parcialmente a página ao receber a resposta, não impedindo a interação do usuário durante o ciclo de requisição/resposta. Na 
+Figura \ref{fig:ajax_comparison} podemos ver um comparativo entre aplicações Web síncronas e assíncronas.
 
 \begin{figure}[!ht]
 	\centering	
 	\caption[\hspace{0.1cm}Comparação aplicação Web clássica e aplicação Web com Ajax.]{Comparação aplicação Web clássica e aplicação Web com Ajax}
 	  \vspace{-0.4cm}
-	\includegraphics[width=.8\textwidth]{figuras/ajax_comparison.png}
+	\includegraphics[width=.6\textwidth]{figuras/ajax_comparison.png}
 	 \vspace{-0.3cm}
 	\\\textbf{\footnotesize Fonte: \cite{garrettAjax}}
 	\label{fig:ajax_comparison}
@@ -71,12 +71,14 @@ podemos ver um comparativo entre aplicações Web síncronas e assíncronas.
 
 
 Com aplicações construídas utilizando Ajax, a Web voltou à ser atrativa para usuário e tem crescido o número de aplicações Web desde então. Segundo
-\cite{tabulaRest} as aplicações Web assumem atualmente uma importância sem precedentes em todas as áreas da sociedade. Em \cite{fieldingRest} foi apresentado o Representational State Transfer (REST) 
-como um estilo arquitetural para sistemas de hipermídia distribuídos baseado no \textit{HyperText Transfer Protocol} (HTTP). Segundo 
-\cite{modelingRestful}, o entendimento do REST pode ajudar na obtenção de uma melhor performace e escalabilidade, bem como diminuir o acoplamento,
-como resultado aumentando a interoperabilidade, promovendo o reuso. Aplicações que seguem as restrições REST são denominadas como RESTful, estas 
-aplicações consistem em um \textit{Web Service} simples que utiliza verbos HTTP para mapear ações as \textit{Create, Read, Update, Delete} (CRUD). 
-Podemos ver na Tabela \ref{tab:tabela1} o mapeamento de verbos HTTP com as ações CRUD.
+\cite{tabulaRest} as aplicações Web assumem atualmente uma importância sem precedentes em todas as áreas da sociedade. 
+
+Em \cite{fieldingRest} foi apresentado o \textit{Representational State Transfer} (REST) como um estilo arquitetural para sistemas de hipermídia 
+distribuídos baseado no \textit{HyperText Transfer Protocol} (HTTP). Segundo \cite{modelingRestful}, o entendimento do REST pode ajudar na obtenção 
+de uma melhor performace e escalabilidade, bem como diminuir o acoplamento, como resultado aumentando a interoperabilidade, promovendo o reuso. 
+Aplicações que seguem as restrições REST são denominadas como RESTful, estas aplicações consistem em um \textit{Web Service} simples que utiliza 
+verbos HTTP para mapear ações as \textit{Create, Read, Update, Delete} (CRUD). Podemos ver na Tabela \ref{tab:tabela1} o mapeamento de verbos HTTP 
+com as ações CRUD.
 
 \begin{table}[htb]
 	\centering
@@ -100,31 +102,31 @@ Podemos ver na Tabela \ref{tab:tabela1} o mapeamento de verbos HTTP com as açõ
 	{\footnotesize\\ \textbf{Fonte: Elaborado pelo autor}}
 \end{table}
 
-Devido à este aprimoramento constante no que diz respeito ao desenvolvimento de aplicações Web, a arquitetura de uma aplicação Web está deixando 
+Devido a este aprimoramento constante no que diz respeito ao desenvolvimento de aplicações Web, a arquitetura de uma aplicação Web está deixando 
 de ser composta por grandes quantidades de códigos \textit{server-side}, onde todo o processamento é feito no servidor, os códigos são fechados e 
 o consumo de banda é maior aos proprietários do sistema, e passando a ter maior utilização de códigos \textit{client-side}, onde o processamento dos 
-scripts da página ocorre na máquina do cliente e somente quando há necessidade de interação com o banco de dados são feitas requisições ao servidor 
-\cite{spa01}. Neste contexto surgiram as \textit{Single Page Applications} (SPA) definida por \cite{spa02} aplicações compota por somente uma 
-pagina HTML, como base para todas as outras páginas Web da aplicação nas quais as interações feitas pelo usuário são implementadas usando JavaScript,
-HTML e CSS. A Figura \ref{fig:spa} demonstra o funcionamento de uma SPA.
+\textit{scripts} da página ocorre na máquina do cliente e somente quando há necessidade de interação com o banco de dados são feitas requisições ao 
+servidor \cite{spa01}. Neste contexto surgiram as \textit{Single Page Applications} (SPA) definida por \cite{spa02} aplicações composta por somente 
+uma página HTML, como base para todas as outras páginas Web da aplicação nas quais as interações feitas pelo usuário são implementadas usando 
+JavaScript, HTML e CSS. A Figura \ref{fig:spa} demonstra o funcionamento de uma SPA.
 
 \begin{figure}[!ht]
 	\centering	
 	\caption[\hspace{0.1cm} Ciclo de vida de uma Single Page Application.]{Ciclo de vida de uma Single Page Application}
 	  \vspace{-0.4cm}
-	\includegraphics[width=.8\textwidth]{figuras/spa.png}
+	\includegraphics[width=.6\textwidth]{figuras/spa.png}
 	 \vspace{-0.3cm}
 	\\\textbf{\footnotesize Fonte: \cite{spa02}}
 	\label{fig:spa}
 \end{figure}
 
 Em aplicações SPA, a primeira requisição realizada pelo cliente recebe como resposta uma página HTML, nesta página inicial há um extenso conteúdo de
-scripts responsáveis pela navegação do usuário, sem que haja recarga da página, quando há necessidade de conteúdos presentes no servidor, esta 
-comunicação é feita através de requisições AJAX, e os scripts presentes na página são responsáveis por renderizar estes conteúdos recebidos na página,
-através do \textit{Document Object Model} (DOM). Toda transição de páginas neste tipo de aplicação é realizada \textit{client-side}. Uma das vantagens
-da adoção deste modelo em relação ao modelo anterior é em relação ao overhead de requisições, o que torna a aplicação mais leve e permite melhor 
-usabilidade para o usuário final, devido ao AJAX não bloquear a manipulação da página durante sua execução \cite{spa01}, além de facilitar a 
-portabilidade da aplicação pois este modelo requer uma API \textit{server-side} robusta e bem estruturada para funcionar.
+\textit{scripts} responsáveis pela navegação do usuário, sem que haja recarga da página, quando há necessidade de conteúdos presentes no servidor, 
+esta comunicação é feita através de requisições Ajax, e os scripts presentes na página são responsáveis por renderizar estes conteúdos recebidos na
+página, através do \textit{Document Object Model} (DOM). Toda transição de páginas neste tipo de aplicação é realizada \textit{client-side}. 
+Uma das vantagens da adoção deste modelo em relação ao modelo anterior é em relação ao \textit{overhead} de requisições, o que torna a aplicação 
+mais leve e permite melhor usabilidade para o usuário final, devido ao AJAX não bloquear a manipulação da página durante sua execução \cite{spa01}, 
+além de facilitar a portabilidade da aplicação pois este modelo requer uma API \textit{server-side} robusta e bem estruturada para funcionar.
 
 \section{\esp Ferramentas e Metodologia}
 Para o desenvolvimento do Ciclotour, foi utilizado o estilo arquitetural RESTful, sendo este sistema contruído como uma SPA. Desta forma, há
@@ -135,27 +137,29 @@ a construção do sistema.
 
 \begin{figure}[!ht]
 	\centering	
-	\caption[\hspace{0.1cm} Estrutura simplificada entre cliente e servidor da aplicação Ciclotour.]{Estrutura simplificada entre cliente e servidor da aplicação Ciclotour}
+	\caption[\hspace{0.1cm} Estrutura simplificada entre cliente e servidor da aplicação Ciclotour.]
+	{Estrutura simplificada entre cliente e servidor da aplicação Ciclotour}
 	  \vspace{-0.4cm}
-	\includegraphics[width=.8\textwidth]{figuras/estruturaCiclotour.png}
+	\includegraphics[width=1\textwidth]{figuras/estruturaCiclotour.png}
 	 \vspace{-0.3cm}
 	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
 	\label{fig:estruturaCiclotour}
 \end{figure}
 
 \subsection{Servidor}
-Para desenvolver o \textit{server-side} da aplicação Ciclotour foram utilizados o framework Python de desenvolvimento Web Django com a extensão 
-Django REST Framework para construção de \textit{Web Services}. O Django utiliza um estilo arquitetural baseado no \textit{Model-View-Controller}
-(MVC), o \textit{Model-View-Template} (MVT). Na aplicação Ciclotour o Django é responsável por processar a solicitação inicial onde a página
-contendo todos os scripts necessários para a aplicação é devolvida como resposta para o solicitante, manter uma interface de administração do sistema
-e manter os modelos do sistema através de seu \textit{Object-relational mapping} (ORM). As requisições posteriores enviadas ao servidor serão 
-requisições de dados que serão processadas e respondidas pelo Django REST framework em formato \textit{JavaScript Object Notation} (JSON).
+Para desenvolver o \textit{server-side} da aplicação Ciclotour foram utilizados o \textit{framework} Python de desenvolvimento Web Django com a 
+extensão Django REST Framework para construção de \textit{Web Services}. O Django utiliza um estilo arquitetural baseado no 
+\textit{Model-View-Controller} (MVC), o \textit{Model-View-Template} (MVT). Na aplicação Ciclotour o Django é responsável por processar a 
+solicitação inicial onde a página contendo todos os \textit{scripts} necessários para a aplicação é devolvida como resposta para o solicitante,
+manter uma interface de administração do sistema e manter os modelos do sistema através de seu \textit{Object-relational mapping} (ORM). 
+As requisições posteriores enviadas ao servidor serão requisições de dados que serão processadas e respondidas pelo Django REST \textit{framework} 
+em formato \textit{JavaScript Object Notation} (JSON).
 
 \subsection{Cliente}
-Para desenvolver o \textit{client-side} da aplicação Ciclotour foram utilizados o framework JavaScript AngularJS e o framework CSS Bootsrap. O 
-AngularJS tem como propósito permitir a construção de elementos \textit{client-side} de forma declarativa, através de suas diretivas. Este framework 
-também adota o estilo arquitetural MVC, além de prover uma abstração para as chamadas AJAX e atualização em tempo real do 
+Para desenvolver o \textit{client-side} da aplicação Ciclotour foram utilizados o \textit{framework} JavaScript AngularJS e o \textit{framework} 
+CSS Bootsrap. O AngularJS tem como propósito permitir a construção de elementos \textit{client-side} de forma declarativa, através de suas diretivas.
+Este \textit{framework} também adota o estilo arquitetural MVC, além de prover uma abstração para as chamadas Ajax e atualização em tempo real do 
 \textit{Document Object Model} (DOM) através do \textit{Two-way Data Binding}, o que promove uma melhor organização do projeto que por se tratar de
-uma SPA, possui alto grau de complexidade em seus scripts. Devido à esta facilidade oferecida pelo framework, o AngularJS foi utilizado desenvolver 
-de todos os scripts \textit{client-side} da aplicação Ciclotour. O Bootstrap foi utilizado com o intuito de oferecer uma interface rica e com design
-responsivo para promover melhor usabilidade e experiência por parte do usuário final do sistema.
+uma SPA, possui alto grau de complexidade em seus scripts. Devido à esta facilidade oferecida pelo \textit{framework}, o AngularJS foi utilizado 
+desenvolver de todos os scripts \textit{client-side} da aplicação Ciclotour. O Bootstrap foi utilizado com o intuito de oferecer uma interface rica 
+e com \textit{design} responsivo para promover melhor usabilidade e experiência por parte do usuário final do sistema.

@@ -4,7 +4,7 @@ usuários deixaram de ter um papel passivo como consumidores de conteúdo para a
 trouxe consigo ferramentas interativas, que tem como foco principal a geração de conteúdo por parte dos próprios usuários, tais como fóruns 
 de discussões e recentemente, as redes sociais como o Twitter, Facebook e o Instagram.
 
-Esta participação ativa dos usuários impactou singnificativamente a quantidade de informação disponíveis na Web. Segundo \cite{artigo01}, 
+Esta participação ativa dos usuários impactou significativamente a quantidade de informação disponíveis na Web. Segundo \cite{artigo01}, 
 o tráfego de dados nesta rede dobra a cada ano, o que gera uma quantidade massiva de informação, tornando a Web muito influente em diversos 
 setores de grande importância na sociedade, passando a fazer parte do cotidiano das pessoas que estão cada vez mais conectadas a mecanismos que
 as  conectam aos conteúdos de seu interesse. Podemos perceber esta influência principalmente através das redes sociais, que segundo 
@@ -51,7 +51,7 @@ quantidade de atualizações de páginas inteiras necessárias no ciclo síncron
 
 Cada recarga na página gerava uma nova requisição ao servidor, que neste modelo é responsável por processar a requisição, gerar e enviar a resposta 
 contendo a página exata que será exibida no \textit{browser} do cliente. Esse \textit{delay} presente nas interações com a aplicação fizeram com que 
-os usuários exigissem uma forma melhor de interagir com estas aplicações. 
+os usuários ``exigissem'' uma forma melhor de interagir com estas aplicações. 
 
 Para solucionar este problema de desempenho presente nas aplicações tradicionais, surgiu o modelo Ajax. Como descrito por \cite{garrettAjax}, uma 
 aplicação Ajax elimina a natureza de interação Web conhecida como \textit{start-stop-start-stop} introduzindo uma camada intermediária 
@@ -163,3 +163,15 @@ Este \textit{framework} também adota o estilo arquitetural MVC, além de prover
 uma SPA, possui alto grau de complexidade em seus scripts. Devido à esta facilidade oferecida pelo \textit{framework}, o AngularJS foi utilizado 
 desenvolver de todos os scripts \textit{client-side} da aplicação Ciclotour. O Bootstrap foi utilizado com o intuito de oferecer uma interface rica 
 e com \textit{design} responsivo para promover melhor usabilidade e experiência por parte do usuário final do sistema.
+
+\subsection{Metodologia}
+O ciclo de desenvolvimento da aplicação Ciclotour foi dividido nas seguintes fases: Coleta inicial de requisitos, teste de aceitação via 
+\textit{mockup} por parte do fornecedor de requisitos, implementação das \textit{features} aceitas e teste final de aceitação. Para isso 
+o desenvolvimento do Ciclotour contou com uma abordagem \textit{top-down}, nesta abordagem o \textit{front-end} é construído antes do 
+\textit{back-end}. Foi adotada esta abordagem de desenvolvimento pois desta forma é possível aprovar o funcionamento do sistema à partir de um 
+\textit{mockup} de como seria a usabilidade da tela, sem necessidade de implementar toda a aplicação. Assim, o ``custo'' de mudanças é reduzido, 
+pois além do que foi contruído ter passado por uma pré-aprovação do fornecedor de requisitos, o maior custo de mudanças se dá em alterações de 
+modelos de banco de dados, que só será implementado após aprovação, evitando que sejam necessárias este tipo de mudança. Desta forma é possível 
+evitar retrabalho e ainda com este propósito, o sistema foi desenvolvido utilizando a técnica conhecida como \textit{Test Driven Development} (TDD), 
+nesta técnica o desenvolvimento é guiado por testes, visando garantir que o que foi desenvolvido está correto. O ciclo de desenvolvimento do 
+Ciclotour priorizou minimizar o retrabalho ao máximo devido ao curto período de tempo disponível.

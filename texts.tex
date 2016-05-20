@@ -128,7 +128,38 @@ Uma das vantagens da adoção deste modelo em relação ao modelo anterior é em
 mais leve e permite melhor usabilidade para o usuário final, devido ao AJAX não bloquear a manipulação da página durante sua execução \cite{spa01}, 
 além de facilitar a portabilidade da aplicação pois este modelo requer uma API \textit{server-side} robusta e bem estruturada para funcionar.
 
-\section{\esp Ferramentas e Metodologia}
+\section{Trabalhos Relacionados}
+\subsection{Strava}
+A rede Strava \cite{strava}, reúne várias modalidades de esportes como ciclísmo, corrida ou triatletísmo, possibilitando seus usuários ao redor do 
+mundo registrarem seus esforços físicos diariamente. O Strava possui um registro de atividades físicas visando comparar o seu progresso, e contém 
+desafios para estimular o usuário à aumentar sua performance. Possui uma versão \textit{mobile} e recursos de redes sociais para ingresso em grupos, 
+ou amizades que incentivem a prática de ativades físicas. O Strava não é focado em ciclísmo ou trilhas, mas sim em atletas em geral, com o objetivo 
+de registrar seus progressos. As rotas nesta aplicação são apenas para medir desempenho e sem finalidade turística, não sendo possível pontuá-las 
+com imagens ou curiosidades de um determinado local. Toda a rede Strava está associada apenas à prática física, melhora de desempenho, 
+registro de desempenho e comparações com demais usuários.
+
+\subsection{Runtastic}
+A rede Runtastic \cite{runtastic}, possui diversas funções voltadas à prática de atividades físicas diárias, com registro destas atividades e da 
+performace obtida, afim de montar estatísticas das mesmas, que podem ser compartilhadas com seus amigos. A rede social está associada à várias 
+práticas físicas, todas elas munidas de estatísticas, não sendo exclusiva para ciclístas. Suas rotas tem como finalidade demarcar o trajeto e 
+progressos físicos em rotinas de treinos. As funções desta rede não abrangem atividades turísticas. Nesta rede é possível associar fotos 
+de momentos durante as atividades físicas, não possui sessão de comentários, toda rede é voltada à prática de atividades físicas em geral e não 
+só ciclísmo, e nem como ferramenta de auxílio ao turísmo. A rede possui duas opções de idiomas inglês e alemão. Permite utilizar aplicativo 
+\textit{mobile} para acompanhamento e GPS.
+
+\section{Metodologia}
+O ciclo de desenvolvimento da aplicação Ciclotour foi dividido nas seguintes fases: Coleta inicial de requisitos, teste de aceitação via 
+\textit{mockup} por parte do fornecedor de requisitos, implementação das \textit{features} aceitas e teste final de aceitação. Para isso 
+o desenvolvimento do Ciclotour contou com uma abordagem \textit{top-down}, nesta abordagem o \textit{front-end} é construído antes do 
+\textit{back-end}. Foi adotada esta abordagem de desenvolvimento pois desta forma é possível aprovar o funcionamento do sistema à partir de um 
+\textit{mockup} de como seria a usabilidade da tela, sem necessidade de implementar toda a aplicação. Assim, o ``custo'' de mudanças é reduzido, 
+pois além do que foi contruído ter passado por uma pré-aprovação do fornecedor de requisitos, o maior custo de mudanças se dá em alterações de 
+modelos de banco de dados, que só será implementado após aprovação, evitando que sejam necessárias este tipo de mudança. Desta forma é possível 
+evitar retrabalho e ainda com este propósito, o sistema foi desenvolvido utilizando a técnica conhecida como \textit{Test Driven Development} (TDD), 
+nesta técnica o desenvolvimento é guiado por testes, visando garantir que o que foi desenvolvido está correto. O ciclo de desenvolvimento do 
+Ciclotour priorizou minimizar o retrabalho ao máximo devido ao curto período de tempo disponível.
+
+\section{\esp Ferramentas}
 Para o desenvolvimento do Ciclotour, foi utilizado o estilo arquitetural RESTful, sendo este sistema contruído como uma SPA. Desta forma, há
 uma separação completa das responsabilidades entre cliente e servidor, onde a responsabilidade de composição das páginas é delegada ao browser
 executado \textit{client-side} e o servidor passa a atuar apenas como um repositório dos dados pertinentes à aplicação. A Figura 
@@ -163,34 +194,3 @@ Este \textit{framework} também adota o estilo arquitetural MVC, além de prover
 uma SPA, possui alto grau de complexidade em seus scripts. Devido à esta facilidade oferecida pelo \textit{framework}, o AngularJS foi utilizado 
 desenvolver de todos os scripts \textit{client-side} da aplicação Ciclotour. O Bootstrap foi utilizado com o intuito de oferecer uma interface rica 
 e com \textit{design} responsivo para promover melhor usabilidade e experiência por parte do usuário final do sistema.
-
-\subsection{Metodologia}
-O ciclo de desenvolvimento da aplicação Ciclotour foi dividido nas seguintes fases: Coleta inicial de requisitos, teste de aceitação via 
-\textit{mockup} por parte do fornecedor de requisitos, implementação das \textit{features} aceitas e teste final de aceitação. Para isso 
-o desenvolvimento do Ciclotour contou com uma abordagem \textit{top-down}, nesta abordagem o \textit{front-end} é construído antes do 
-\textit{back-end}. Foi adotada esta abordagem de desenvolvimento pois desta forma é possível aprovar o funcionamento do sistema à partir de um 
-\textit{mockup} de como seria a usabilidade da tela, sem necessidade de implementar toda a aplicação. Assim, o ``custo'' de mudanças é reduzido, 
-pois além do que foi contruído ter passado por uma pré-aprovação do fornecedor de requisitos, o maior custo de mudanças se dá em alterações de 
-modelos de banco de dados, que só será implementado após aprovação, evitando que sejam necessárias este tipo de mudança. Desta forma é possível 
-evitar retrabalho e ainda com este propósito, o sistema foi desenvolvido utilizando a técnica conhecida como \textit{Test Driven Development} (TDD), 
-nesta técnica o desenvolvimento é guiado por testes, visando garantir que o que foi desenvolvido está correto. O ciclo de desenvolvimento do 
-Ciclotour priorizou minimizar o retrabalho ao máximo devido ao curto período de tempo disponível.
-
-\section{Trabalhos Relacionados}
-\subsection{Strava}
-A rede Strava \cite{strava}, reúne várias modalidades de esportes como ciclísmo, corrida ou triatletísmo, possibilitando seus usuários ao redor do 
-mundo registrarem seus esforços físicos diariamente. O Strava possui um registro de atividades físicas visando comparar o seu progresso, e contém 
-desafios para estimular o usuário à aumentar sua performance. Possui uma versão \textit{mobile} e recursos de redes sociais para ingresso em grupos, 
-ou amizades que incentivem a prática de ativades físicas. O Strava não é focado em ciclísmo ou trilhas, mas sim em atletas em geral, com o objetivo 
-de registrar seus progressos. As rotas nesta aplicação são apenas para medir desempenho e sem finalidade turística, não sendo possível pontuá-las 
-com imagens ou curiosidades de um determinado local. Toda a rede Strava está associada apenas à prática física, melhora de desempenho, 
-registro de desempenho e comparações com demais usuários.
-
-\subsection{Runtastic}
-A rede Runtastic \cite{runtastic}, possui diversas funções voltadas à prática de atividades físicas diárias, com registro destas atividades e da 
-performace obtida, afim de montar estatísticas das mesmas, que podem ser compartilhadas com seus amigos. A rede social está associada à várias 
-práticas físicas, todas elas munidas de estatísticas, não sendo exclusiva para ciclístas. Suas rotas tem como finalidade demarcar o trajeto e 
-progressos físicos em rotinas de treinos. As funções desta rede não abrangem atividades turísticas. Nesta rede é possível associar fotos 
-de momentos durante as atividades físicas, não possui sessão de comentários, toda rede é voltada à prática de atividades físicas em geral e não 
-só ciclísmo, e nem como ferramenta de auxílio ao turísmo. A rede possui duas opções de idiomas inglês e alemão. Permite utilizar aplicativo 
-\textit{mobile} para acompanhamento e GPS.

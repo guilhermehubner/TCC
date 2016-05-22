@@ -180,14 +180,36 @@ No Quadro 1 podemos ver um quadro comparativo entre as funções do Ciclotour e 
 \section{Metodologia}
 O ciclo de desenvolvimento da aplicação Ciclotour foi dividido nas seguintes fases: Coleta inicial de requisitos, teste de aceitação via 
 \textit{mockup} por parte do fornecedor de requisitos, implementação das \textit{features} aceitas e teste final de aceitação. Para isso 
-o desenvolvimento do Ciclotour contou com uma abordagem \textit{top-down}, nesta abordagem o \textit{front-end} é construído antes do 
+o desenvolvimento do Ciclotour contou com uma abordagem \textit{top-down}. Nesta abordagem o \textit{front-end} é construído antes do 
 \textit{back-end}. Foi adotada esta abordagem de desenvolvimento pois desta forma é possível aprovar o funcionamento do sistema à partir de um 
-\textit{mockup} de como seria a usabilidade da tela, sem necessidade de implementar toda a aplicação. Assim, o ``custo'' de mudanças é reduzido, 
-pois além do que foi contruído ter passado por uma pré-aprovação do fornecedor de requisitos, o maior custo de mudanças se dá em alterações de 
-modelos de banco de dados, que só será implementado após aprovação, evitando que sejam necessárias este tipo de mudança. Desta forma é possível 
-evitar retrabalho e ainda com este propósito, o sistema foi desenvolvido utilizando a técnica conhecida como \textit{Test Driven Development} (TDD), 
-nesta técnica o desenvolvimento é guiado por testes, visando garantir que o que foi desenvolvido está correto. O ciclo de desenvolvimento do 
-Ciclotour priorizou minimizar o retrabalho ao máximo devido ao curto período de tempo disponível.
+\textit{mockup} de como seria a usabilidade de cada tela do sistema, sem necessidade de implementar toda a aplicação. Assim, o ``custo'' de mudanças 
+é reduzido, pois além do que foi contruído ter passado por uma pré-aprovação do fornecedor de requisitos, o maior custo de mudanças se dá em 
+alterações de modelos de banco de dados, que só será implementado após aprovação, evitando que sejam necessárias este tipo de mudança. Desta forma é 
+possível evitar retrabalho. Nos próximos parágrafos serão descritas as fases do ciclo de desenvolvimento da aplicação Ciclotour.
+
+Na fase de coleta inicial de requisitos, foi realizada uma reunião com cicloturistas que são os principais fornecedores de requisitos para a 
+aplicação. Nesta fase, foram expostos os principais problemas enfrentados pelos fornecedores durante o planejamento de sua atividade, as 
+ferramentas que eram utilizadas para auxiliar na solução destes problemas, além de informações que os fornecedores de requisitos tinham maior
+dificuldade de encontrar. Após esta reunião, foram executadas análises destes requisitos e gerada uma proposta inicial de solução que foi apresentada
+ao envolvidos. Após a aprovação desta proposta, iniciou-se a contrução do \textit{mockup} que será utilizado na próxima fase.
+
+Após finalizar a construção do \textit{mockup} onde é possível interagir de forma prototipada com o sistema, percebendo o funcionamento das 
+\textit{features} envolvidas, usabilidade e o \textit{workflow} de como será o sistema, é realizado um teste de aceitação por parte dos 
+cicloturistas envolvidos no projeto para antecipar o \textit{feedback} em relação às mudanças necessárias, com o objetivo de adequar a aplicação às 
+espectaticas do usuário. Esta fase foi executadas em várias iterações, até que o \textit{mockup} fosse totalmente aprovado pelos fornecedores de 
+requisitos e só então começar a construção do \textit{backend}.
+
+Tendo um protótipo aprovado, iniciou-se a fase de implementação das features do Ciclotour. Nesta fase, foi utilizada a técnica conhecida como 
+\textit{Test Driven Development} (TDD). Esta técnica tem como princípio o desenvolvimento guiado por testes, visando garantir que o que foi 
+desenvolvido está correto, evitando assim retrabalho. Utilizando esta técnica é possível garantir a conformidade com requisitos e prevenção de 
+\textit{bugs} que possam surgir. 
+
+Cada feature implementadarealizá-lo gerou um \textit{deploy} da aplicação para o servidor, onde foi possível que os fornecedores de requisitos testassem
+e retornassem um \textit{feedback} o quanto antes, evitando maiores impactos por conta de mudanças necessárias. Essa fase junto à fase de 
+implementação ocorreu de forma interativa, até que o sistema estivesse totalmente construído.
+
+Este ciclo de desenvolvimento foi escolhido para o desenvolvimento da aplicação Ciclotour pois desta forma foi possível minimizar o retrabalho ao 
+máximo, o que no caso deste trabalho era de extrema importância devido ao curto período de tempo disponível para realiza-lo. 
 
 \section{\esp Ferramentas}
 Para o desenvolvimento do Ciclotour, foi utilizado o estilo arquitetural RESTful, sendo este sistema contruído como uma SPA. Desta forma, há

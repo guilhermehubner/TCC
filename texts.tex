@@ -129,23 +129,53 @@ mais leve e permite melhor usabilidade para o usuário final, devido ao AJAX nã
 além de facilitar a portabilidade da aplicação pois este modelo requer uma API \textit{server-side} robusta e bem estruturada para funcionar.
 
 \section{Trabalhos Relacionados}
-\subsection{Strava}
-A rede Strava \cite{strava}, reúne várias modalidades de esportes como ciclísmo, corrida ou triatletísmo, possibilitando seus usuários ao redor do 
-mundo registrarem seus esforços físicos diariamente. O Strava possui um registro de atividades físicas visando comparar o seu progresso, e contém 
-desafios para estimular o usuário à aumentar sua performance. Possui uma versão \textit{mobile} e recursos de redes sociais para ingresso em grupos, 
-ou amizades que incentivem a prática de ativades físicas. O Strava não é focado em ciclísmo ou trilhas, mas sim em atletas em geral, com o objetivo 
-de registrar seus progressos. As rotas nesta aplicação são apenas para medir desempenho e sem finalidade turística, não sendo possível pontuá-las 
-com imagens ou curiosidades de um determinado local. Toda a rede Strava está associada apenas à prática física, melhora de desempenho, 
-registro de desempenho e comparações com demais usuários.
-
 \subsection{Runtastic}
-A rede Runtastic \cite{runtastic}, possui diversas funções voltadas à prática de atividades físicas diárias, com registro destas atividades e da 
-performace obtida, afim de montar estatísticas das mesmas, que podem ser compartilhadas com seus amigos. A rede social está associada à várias 
-práticas físicas, todas elas munidas de estatísticas, não sendo exclusiva para ciclístas. Suas rotas tem como finalidade demarcar o trajeto e 
-progressos físicos em rotinas de treinos. As funções desta rede não abrangem atividades turísticas. Nesta rede é possível associar fotos 
-de momentos durante as atividades físicas, não possui sessão de comentários, toda rede é voltada à prática de atividades físicas em geral e não 
-só ciclísmo, e nem como ferramenta de auxílio ao turísmo. A rede possui duas opções de idiomas inglês e alemão. Permite utilizar aplicativo 
-\textit{mobile} para acompanhamento e GPS.
+A rede Runtastic \cite{runtastic}, reúne várias modalidades de esportes como ciclismo, corrida ou triatletismo. Oferece à seus usuários a
+possibilidade de registrar suas atividades e performace obtida, afim de montar estatísticas que podem ser compartilhadas com seus amigos e usadas 
+para medir seu progresso. Esta rede social está associada à várias práticas físicas, com seu foco voltado ao treinamento. É munida de estatísticas 
+para auxiliar em análises de desempenho de atletas em geral e não somente ciclistas. Suas rotas tem como finalidade demarcar o trajeto e progressos 
+físicos em rotinas de treinos. As funções desta rede não abrangem atividades turísticas. Esta rede possui o recurso de enviar fotos de momentos 
+durante sessões de atividades físicas realizadas pelo usuário. A rede  possui duas opções de idiomas inglês e alemão. Permite utilizar aplicativo 
+\textit{mobile} para acompanhamento e GPS para gerar as estatísticas com base na atividade realizada. Como recursos de rede social, o Runtastic 
+permite relacionamento de amizade entre usuários, \textit{post's} no mural de outros usuários, acompanhamento em tempo real através de um mapa a 
+atividade realizada por outros usuários, enviar \textit{cheer's} para o usuário que está realizando a atividade, além de comentários sobre a 
+atividade realizada e dar \textit{like} na mesma. 
+
+\subsection{Strava}
+A rede Strava \cite{strava} possui diversas funções voltadas à prática de atividades físicas diárias, focadas em caminhadas/corridas e ciclismo. Esta
+rede possibilita seus usuários ao redor do mundo registrarem seus esforços físicos diariamente, pois possui um registro de atividades físicas visando 
+comparar o seu progresso. Oferece à seus usuários desafios para estimula-los a aumentar sua performance, possui o recurso de traçar rotas com o 
+objetivo de planejar a atividade esportiva e treinamento. Nesta rede é possível cadastrar metas personalizadas relacionadas à desempenho, 
+possibilitando seus usuários um acompanhamento de seu progresso em suas atividades, além possuir quadros informativos sobre distâncias percorridas 
+em relação à espaços de tempo. Como recursos de rede social, o Strava permite ao usuário seguir outros usuários, ingressar em grupos de usuários 
+denominados clubes que podem ser públicos ou privados, possui um feed de atividades onde são exibidas atividades realizadas por todos os usuários da 
+rede, neste feed são exibidas fotos compartilhadas durante a realização destas atividades e a rota percorrida com informações de distância total e 
+horário inicial e final da atividade. Esta rede possui um aplicativo mobile que registra através do uso do GPS a atividade do usuário e permite ao 
+mesmo compartilhar fotos tiradas durante o percurso. O Strava não oferece nenhum recurso voltado à atividades turísticas.
+
+No Quadro 1 podemos ver um quadro comparativo entre as funções do Ciclotour e das redes analisadas.
+
+   \begin{center}
+          \centering
+       	\textbf{Quadro 1 - Comparação entre funcionalidades das Redes e o Ciclotour}\\
+        \label{quadro1}
+	\begin{tabular}{|c|c|c|} \hline
+	\multicolumn{3}{|c|}{\textbf{Comparação entre funcionalidades das Redes e o Ciclotour }} 	  \\
+		\hline \textbf{ Funções do Ciclotour } & Strava & Runtastic \\  
+		\hline \textbf{ Criar rotas personalizadas } & SIM & SIM \\ 
+		\hline \textbf{ Criar pontos informativos em rotas } & NÃO & NÃO  \\
+		\hline \textbf{ Indicar tipo do terreno da rota } & SIM & SIM \\ 
+		\hline \textbf{	Adicionar Fotos à Rota } & NAO & NAO \\ 
+		\hline \textbf{ Comentários em rotas }	& NÃO & SIM \\ 
+		\hline \textbf{	Comentários em pontos } & NAO & NAO \\ 
+		\hline \textbf{	Marcar rotas como realizadas ou pendentes } & NAO & NAO \\ 
+		\hline \textbf{	Permitir relação de amizade entre usuários } & NÃO & SIM \\ 
+		\hline \textbf{	Buscar rotas com base em origem e destino } & NÃO & NÃO \\ 
+		\hline
+	\end{tabular}
+	\vspace{0.1cm} 
+	{\footnotesize\\ \textbf{Fonte: Elaborado pelo autor}}
+   \end{center}
 
 \section{Metodologia}
 O ciclo de desenvolvimento da aplicação Ciclotour foi dividido nas seguintes fases: Coleta inicial de requisitos, teste de aceitação via 

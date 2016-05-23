@@ -246,3 +246,75 @@ Este \textit{framework} também adota o estilo arquitetural MVC, além de prover
 uma SPA, possui alto grau de complexidade em seus scripts. Devido à esta facilidade oferecida pelo \textit{framework}, o AngularJS foi utilizado 
 desenvolver de todos os scripts \textit{client-side} da aplicação Ciclotour. O Bootstrap foi utilizado com o intuito de oferecer uma interface rica 
 e com \textit{design} responsivo para promover melhor usabilidade e experiência por parte do usuário final do sistema.
+
+\section{Aplicação Ciclotour}
+O Ciclotour foi desenvolvido com o principal objetivo de atender às demandas específicas percebidas no meio do cicloturismo, uma atividade que exige
+um extenso planejamento por parte do praticante e que carece de meios de informações focados em suas atividades. Para tal, o Ciclotour foi 
+desenvolvido adotando uma arquitetura centrada em dados, de forma à se tornar um grande repositório de informações específicas ao meio do cicloturismo 
+aliementado pelos próprios usuários de forma colaborativa. Assim, será possível centralizar informações que estão disponíveis de forma esparsa na Web
+em um único local e auxiliar os cicloturistas em seu planejamento sem que o mesmo precise extender sua pesquisa às infinitas fontes espalhadas por 
+toda internet. Para alcançar este objetivo, o Ciclotour foi desenvolvido no formato de rede social, para estimular o compartilhamento de informações 
+por parte de seus usuários, através de interações por comentários, cadastro de rotas personalizadas, cadastro de pontos em rotas e envio de fotos 
+para rotas. Nas seções seguintes serão detalhadas todas as funcionalidades da aplicação.
+
+\subsection{Cadastro de rotas}
+A aplicação Ciclotour conta com uma funcionalidade de cadastro de rotas personalizadas, possibilitando ao usuário traçar rotas de forma interativa 
+através de simples cliques em um mapa. Para tal, basta que o usuário informe uma origem e após preencher este campo, será exibido um mapa na 
+tela da aplicação centralizado na origem informada pelo usuário. Para continuar o cadastro da rota, basta que o usuário clique no mapa marcando os 
+pontos para traçar a rota. O Ciclotour conta com duas formas de traçar a rota entre estes pontos, sendo a forma automática, que permite ao usuário 
+traçar a melhor rota que interliga estes pontos fornecida pela API do GoogleMaps ou a forma manual, em que a rota entre os pontos será uma linha reta. 
+Além destas informações, o usuário deve fornecer um título para esta rota, uma descrição, e a informação do tipo de terreno desta rota. Feito isto, o 
+usuário tem a possibilidade de restringir o acesso desta rota, visando garantir sua privacidade. As opções disponíveis para privacidade de rotas são:
+privada, pública e restrita aos amigos. Na opção privada, somente o usuário terá acesso à esta rota, enquanto na opção pública todos os usuários do 
+Ciclotour poderão interagir com a rota. Além destas opções, o Ciclotour ainda permite ao usuário configurar a rota como restrita à amigos, de forma
+que somente os amigos do usuário que criou a rota poderão interagir com a mesma. Os tipos de terreno disponíveis inicialmente no sistema são: 
+montanhoso, estrada, estrada de terra, trilha e praia. Novos tipos de terreno podem ser cadastrado na interface de administração do sistema
+conforme for necessário.
+
+\subsection{Cadastro de pontos em rotas}
+Uma informação muito importante para cicloturistas são o que poderão encontrar durante seu percurso nas rotas. É de extrema importância para um 
+cicloturista saber por exemplo, onde ele pode encontrar pontos de paradas como restaurantes, pousadas, hotéis, pois muitas vezes as rotas percorridas
+por estas pessoas é extensa e podem inclusive durar dias. Para isto, a aplicação Ciclotour possui um cadastro de pontos informativos em rotas, onde
+usuários podem cadastrar pontos em determinada rota, bastando clicar sobre ele no mapa da rota e informando um título, o tipo do ponto e uma 
+descrição. O sistema irá gerar automáticamente o endereço do ponto. O sistema inicialmente conta com 5 tipos de pontos, sendo eles: Natureza 
+exuberante, estadia, restaurante, alerta e proibição. Cada tipo possui um ícone que será exibido no mapa, facilitando ao usuário a identificação.
+Na interface de admnistração do sistema é possível cadastrar novos tipos de pontos, conforme for necessário. Estes tipos de ponto iniciais do 
+sistema foram levantados com o fornecedor de requisitos como sendo os principais pontos de interesse para cicloturistas em uma rota.
+
+\subsection{Comentários em Pontos e Rotas}
+Fóruns na Web geram uma grande quantidade de informações à partir da interação entre usuários. Pensando nisto, a aplicação Ciclotour conta com uma 
+sessão de comentários em Rotas e em Pontos, possibilitando o interação entre usuários e permitindo ao usuário expor suas observações e ponto de 
+vista, desta forma gerando informações relativas à estes pontos e rotas que podem ser aproveitadas por outros usuários, além de ser um local onde 
+usuários podem tirar dúvidas com outros usuários que já realizaram tal rota ou passaram em tal ponto.
+
+\subsection{Buscar rotas}
+Ao entrar na página de buscas de rotas, serão exibidas as rotas cadastradas ordenadas por sua data de cadastro, exibindo as mais recentes.
+O Ciclotour possui a opção busca por rotas à partir de origem e destino, onde o usuário pode informar de onde deseja partir e até onde deseja chegar
+e o sistema irá retornar as rotas já cadastradas que atendam à esta condição. Para esta funcionalidade, foi utilizado um raio de 5 km entre as 
+coordenadas do ponto de origem e destino informados pelo usuário. Ao informar origem e destino, o sistema automáticamente converte o texto em 
+coordenadas utilizando a API do GoogleMaps, e realiza um cálculo de raio de 5 km e busca as rotas cadastradas que possuem seu primeiro e último ponto
+dentro do raio de 5km da origem e destino informadas pelo usuário respectivamente.
+
+\subsection{Marcar rotas como realizadas ou pendentes}
+A aplicação Ciclotour permite ao usuário marcar as rotas como realizadas ou pentendes, possibilitando que o mesmo organize suas próximas atividades
+através das rotas pendentes, as quais o usuário deseja realizar. Além de poder marcar rotas como pendentes, o usuário poderá marcá-las como realizada
+e a quantidade de rotas pendentes e realizadas pelo usuário serão exibidas para os outros usuários do Ciclotour.
+
+\subsection{Relação de amizade}
+O Ciclotour permite relações de amizades entre usuários mediante solicitação. Usuários podem buscar por outros usuários através de seu nome, 
+sobrenome e e-mail e enviar solicitação de amizade à este usuário que pode ou não aceitá-la. A relação de amizade entre usuário permite que os mesmos
+vejam em seu feed as atividades de seus amigos. O Ciclotour também possui um contador de amizades que será exibido para outros usuários.
+
+\subsection{Adicionar fotos em rotas}
+Se tratando de uma aplicação voltada ao turismo, é importante que usuários possam compartilhar fotos de suas atividades com outros usuários. Fotos 
+podem despertar interesse de outros cicloturistas pela rota, além de ser uma fonte de informação. É muito comum usuários postarem fotos em pontos 
+turísticos em outras redes sociais, sendo o Ciclotour uma rede social focada em turismo, este recurso é indispensável.
+
+\section{Conclusão}
+Este artigou apresentou a aplicação Ciclotour, uma rede social colaborativa para cicloturistas, cujo objetivo principal é oferecer aos cicloturistas 
+um local onde possam interagir com outros cicloturistas, compartilhar e encontrar informações que auxiliem o planejamento de suas atividade, 
+oferecendo recursos para atender as necessidades específicas deste meio, percebidas através deste trabalho e que ainda não foram exploradas por 
+outras aplicações.
+
+
+

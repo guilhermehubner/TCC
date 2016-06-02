@@ -271,9 +271,10 @@ a construção do sistema.
 A aplicação Ciclotour conta com uma funcionalidade de cadastro de rotas personalizadas, possibilitando ao usuário traçar rotas de forma interativa 
 através de simples cliques em um mapa. Para tal, basta que o usuário informe uma origem e após preencher este campo, será exibido um mapa na 
 tela da aplicação centralizado na origem informada pelo usuário. Para continuar o cadastro da rota, basta que o usuário clique no mapa marcando os 
-pontos para traçar a rota. O Ciclotour conta com duas formas de traçar a rota entre estes pontos, sendo a forma automática, que permite ao usuário 
-traçar a melhor rota que interliga estes pontos, fornecida pela API do GoogleMaps ou a forma manual, em que a rota entre os pontos será uma linha 
-reta. Além destas informações, o usuário deve fornecer um título para esta rota, uma descrição, e a informação do tipo de terreno desta rota. 
+pontos para traçar a rota conforme demonstrado na Figura \ref{fig:cadastroRotas}. O Ciclotour conta com duas formas de traçar a rota entre estes 
+pontos, sendo a forma automática, que permite ao usuário traçar a melhor rota que interliga estes pontos, fornecida pela API do GoogleMaps ou a 
+forma manual, em que a rota entre os pontos será uma linha reta. Além destas informações, o usuário deve fornecer um título para esta rota, uma 
+descrição, e a informação do tipo de terreno desta rota. 
 
 Feito isto, o usuário tem a possibilidade de restringir o acesso desta rota, visando garantir sua privacidade. As opções disponíveis para privacidade de 
 rotas são: privada, pública e restrita aos amigos. Na opção privada, somente o usuário terá acesso à esta rota, enquanto na opção pública todos os 
@@ -282,17 +283,39 @@ de forma que somente os amigos do usuário que criou a rota poderão interagir c
 são: montanhoso, estrada, estrada de terra, trilha e praia. Novos tipos de terreno podem ser cadastrado na interface de administração do sistema 
 conforme for necessário.
 
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Cadastro de Rotas da aplicação Ciclotour.]
+	{Formulário de cadastro de rotas da aplicação Ciclotour}
+	  \vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/cadastroRotas.png}
+	 \vspace{0cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:cadastroRotas}
+\end{figure}
+
 \subsection{Cadastro de pontos em rotas}
 Uma informação muito importante para cicloturistas é o que poderão encontrar durante seu percurso nas rotas. É de extrema importância para um 
 cicloturista saber por exemplo, onde ele pode encontrar pontos de paradas como restaurantes, pousadas, hotéis, pois muitas vezes as rotas percorridas
 por estas pessoas é extensa e podem inclusive durar dias. Para isto, a aplicação Ciclotour possui um cadastro de pontos informativos em rotas, onde
 usuários podem cadastrar pontos em determinada rota, bastando clicar sobre ele no mapa da rota e informando um título, o tipo do ponto e uma 
-descrição. O sistema irá gerar automaticamente o endereço do ponto. 
+descrição. O sistema irá gerar automaticamente o endereço do ponto, conforme visto na Figura \ref{fig:cadastroPonto}. 
 
 O sistema inicialmente conta com 6 tipos de pontos, sendo eles: Natureza exuberante, pontos turísticos, estadia, restaurante, alerta e proibição. 
 Cada tipo possui um ícone que será exibido no mapa, facilitando ao usuário a identificação. Na interface de admnistração do sistema é possível 
 cadastrar novos tipos de pontos, conforme for necessário. Estes tipos de ponto iniciais do sistema foram levantados com o fornecedor de requisitos 
 como sendo os principais pontos de interesse para cicloturistas em uma rota.
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Cadastro de Pontos em Rotas da aplicação Ciclotour.]
+	{Formulário de cadastro de ponto em uma rota da aplicação Ciclotour}
+	  \vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/cadastroPonto.png}
+	 \vspace{0cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:cadastroPonto}
+\end{figure}
 
 \subsection{Comentários em Pontos e Rotas}
 Fóruns na Web geram uma grande quantidade de informações a partir da interação entre usuários. Pensando nisto, a aplicação Ciclotour conta com uma 
@@ -309,14 +332,50 @@ coordenadas utilizando a API do GoogleMaps, e realiza um cálculo de raio de 5 k
 dentro do raio de 5km da origem e destino informadas pelo usuário respectivamente.
 
 \subsection{Marcar rotas como realizadas ou pendentes}
-A aplicação Ciclotour permite ao usuário marcar as rotas como realizadas ou pendentes, possibilitando que o mesmo organize suas próximas atividades
-através das rotas pendentes, as quais o usuário deseja realizar. Além de poder marcar rotas como pendentes, o usuário poderá marcá-las como realizada
-e a quantidade de rotas pendentes e realizadas pelo usuário serão exibidas para os outros usuários do Ciclotour.
+A aplicação Ciclotour permite ao usuário marcar as rotas como realizadas ou pendentes conforme a Figura \ref{fig:marcarRota}, possibilitando que o 
+mesmo organize suas próximas atividades através das rotas pendentes, as quais o usuário deseja realizar. Além de poder marcar rotas como pendentes, 
+o usuário poderá marcá-las como realizada e a quantidade de rotas pendentes e realizadas pelo usuário serão exibidas para os outros usuários do 
+Ciclotour.
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Marcar rotas como realizadas ou pendentes.]
+	{Página de visualização da Rota onde é possível o usuário marcá-la como realizada ou pendente}
+	  \vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/marcarRota.png}
+	 \vspace{0cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:marcarRota}
+\end{figure}
 
 \subsection{Relação de amizade}
+
 O Ciclotour permite relações de amizades entre usuários mediante solicitação. Usuários podem buscar por outros usuários através de seu nome, 
-sobrenome e e-mail e enviar solicitação de amizade a este usuário que pode ou não aceitá-la. A relação de amizade entre usuário permite que os mesmos
-vejam em seu feed as atividades de seus amigos. O Ciclotour também possui um contador de amizades que será exibido para outros usuários.
+sobrenome e e-mail e enviar solicitação de amizade a este usuário que pode ou não aceitá-la demonstrados na Figura \ref{fig:buscarUsuario} e na 
+Figura \ref{fig:solicitacaoAmizade}. A relação de amizade entre usuário permite que os mesmos vejam em seu \textit{feed} as atividades de seus amigos. O 
+Ciclotour também possui um contador de amizades que será exibido para outros usuários.
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Buscar usuários.]
+	{Página de busca de usuários e envio de solicitação de amizade}
+	  \vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/buscarUsuario.png}
+	 \vspace{0cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:buscarUsuario}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Solicitações de amizade.]
+	{Página de onde são exibidas as solicitações de amizade}
+	  \vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/solicitacaoAmizade.png}
+	 \vspace{0cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:solicitacaoAmizade}
+\end{figure}
 
 \subsection{Adicionar fotos em rotas}
 Se tratando de uma aplicação voltada ao turismo, é importante que usuários possam compartilhar fotos de suas atividades com outros usuários. Fotos 

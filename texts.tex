@@ -213,22 +213,6 @@ Este ciclo de desenvolvimento foi escolhido para o desenvolvimento da aplicaçã
 máximo, o que no caso deste trabalho era de extrema importância devido ao curto período de tempo disponível para realiza-lo. 
 
 \section{\esp Ferramentas}
-Para o desenvolvimento do Ciclotour, foi utilizado o estilo arquitetural RESTful, sendo este sistema contruído como uma SPA. Desta forma, há
-uma separação completa das responsabilidades entre cliente e servidor, onde a responsabilidade de composição das páginas é delegada ao 
-\textit{browser} executado \textit{client-side} e o servidor passa a atuar apenas como um repositório dos dados pertinentes à aplicação. A Figura 
-\ref{fig:estruturaCiclotour} demonstra a estrutura simplificada entre cliente e servidor da aplicação Ciclotour, e as tecnologias utilizadas para
-a construção do sistema.
-
-\begin{figure}[!ht]
-	\centering	
-	\caption[\hspace{0.1cm} Estrutura simplificada entre cliente e servidor da aplicação Ciclotour.]
-	{Estrutura simplificada entre cliente e servidor da aplicação Ciclotour}
-	  \vspace{-0.4cm}
-	\includegraphics[width=1\textwidth]{figuras/estruturaCiclotour.png}
-	 \vspace{-0.3cm}
-	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
-	\label{fig:estruturaCiclotour}
-\end{figure}
 
 \subsection{Servidor}
 Para desenvolver o \textit{server-side} da aplicação Ciclotour, foram utilizados o \textit{framework} Python de desenvolvimento Web Django com a 
@@ -260,6 +244,23 @@ em um único local e auxiliar os cicloturistas em seu planejamento sem que o mes
 toda internet. Para alcançar este objetivo, o Ciclotour foi desenvolvido no formato de rede social, para estimular o compartilhamento de informações 
 por parte de seus usuários, através de interações por comentários, cadastro de rotas personalizadas, cadastro de pontos em rotas e envio de fotos 
 para rotas. Nas seções seguintes serão detalhadas todas as funcionalidades da aplicação.
+
+Para o desenvolvimento do Ciclotour, foi utilizado o estilo arquitetural RESTful, sendo este sistema contruído como uma SPA. Desta forma, há
+uma separação completa das responsabilidades entre cliente e servidor, onde a responsabilidade de composição das páginas é delegada ao 
+\textit{browser} executado \textit{client-side} e o servidor passa a atuar apenas como um repositório dos dados pertinentes à aplicação. A Figura 
+\ref{fig:estruturaCiclotour} demonstra a estrutura simplificada entre cliente e servidor da aplicação Ciclotour, e as tecnologias utilizadas para
+a construção do sistema.
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Estrutura simplificada entre cliente e servidor da aplicação Ciclotour.]
+	{Estrutura simplificada entre cliente e servidor da aplicação Ciclotour}
+	  \vspace{-0.4cm}
+	\includegraphics[width=1\textwidth]{figuras/estruturaCiclotour.png}
+	 \vspace{-0.3cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:estruturaCiclotour}
+\end{figure}
 
 \subsection{Cadastro de rotas}
 A aplicação Ciclotour conta com uma funcionalidade de cadastro de rotas personalizadas, possibilitando ao usuário traçar rotas de forma interativa 

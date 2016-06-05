@@ -1,5 +1,5 @@
 \section{\esp Introdução}
-Com a mudança de mentalidade da Web para o novo paradgma de aplicações Web conhecido como Web 2.0 proposta por \cite{web20Proposta}, seus 
+Com a mudança de mentalidade da Web para o novo paradigma de aplicações Web conhecido como Web 2.0 proposto por \cite{web20Proposta}, seus 
 usuários deixaram de ter um papel passivo como consumidores de conteúdo para assumir um papel ativo de produtores de conteúdo. Esta mudança 
 trouxe consigo ferramentas interativas, que tem como foco principal a geração de conteúdo por parte dos próprios usuários, tais como fóruns 
 de discussões e recentemente, as redes sociais como o Twitter, Facebook e o Instagram.
@@ -17,15 +17,15 @@ interesse, economizando assim sua atenção. Estas ferramentas com o passar do t
 que por sua vez demandam por mecanismos cada vez mais robustos e personalizados de acordo com suas necessidades, como consequência existe 
 uma demanda constante de novas aplicações mais específicas para atender determinada comunidade.
 
-No estudo estudo realizado por \cite{perfilCicloturista}, após realizar uma pesquisa com 302 cicloturistas, concluiu-se que a internet é sem dúvidas 
-o meio de informação mais utilizado por esta comunidade, totalizando 46\% das respostas em relação à qual o meio de informação utilizado por eles.
+No estudo estudo realizado por \cite{perfilCicloturista}, após realizar uma pesquisa com 302 cicloturistas, concluiu-se que a internet é, sem dúvidas, 
+o meio de informação mais utilizado por esta comunidade, totalizando 46\% das respostas em relação a qual o meio de informação utilizado por eles.
 No entanto, neste meio há uma demanda ainda não explorada por uma aplicação focada nesta prática, pois de acordo com \cite{cicloturismo02}, 
 as grandes viagens realizadas sobre a bicicleta requerem um melhor preparo e conhecimento, por parte do ciclista, e ressalta a importância de se 
 conhecer a extensão da viagem e tempo total disponível, além da região, relevo e clima escolhidos como trajeto. Devido a complexidade do planejamento
-requerido, percebe-se neste meio a necessidade de uma ferramenta que centralize informações importantes para tal. Praticantes desta atividade por não 
-possuírem uma ferramenta específica, recorrem a outras com propósito similares para auxiliá-los no planejamento de seus trajetos, que não oferecem 
-informações importantes para este planejamento. O cicloturismo conforme descrito por \cite{cicloturismo01} é uma modalidade do ecoturismo que está 
-ganhando cada vez mais adeptos no Brasil, por ser uma atividade de baixo impacto ambiental, já que é realizado com bicicletas.
+requerido, percebe-se neste meio a necessidade de uma ferramenta que centralize informações importantes para tal. Praticantes desta atividade, por não 
+possuírem uma ferramenta específica, recorrem a outras com propósitos similares para auxiliá-los no planejamento de seus trajetos, que não oferecem 
+informações importantes para o mesmo. O cicloturismo, conforme descrito por \cite{cicloturismo01}, é uma modalidade do ecoturismo que está 
+ganhando cada vez mais adeptos no Brasil, por ser uma atividade de baixo impacto ambiental, já que é realizada com bicicletas.
 
 Este trabalho tem como objetivo desenvolver uma ferramenta no formato rede social Web voltada a atender esta demanda de informações observada 
 no meio do cicloturismo. Segundo \cite{perfilCicloturista} o  "fenômeno" cicloturismo é considerado de fraco a bom em termos de comunicação 
@@ -36,7 +36,7 @@ praticantes e promoção da prática.
 
 \section{\esp Referencial Teórico}
 \subsection{Arquitetura Web e AJAX}
-No princípio das aplicações Web, devido ao seu comportamento síncrono, as mesmas ficaram para trás em relação a aplicações \textit{desktop}, pois a 
+No princípio das aplicações Web, devido ao seu comportamento síncrono, as mesmas ficaram para trás em relação às aplicações \textit{desktop}, pois a 
 interação com essas aplicações resultava em um longo período de espera conforme descreve \cite{deitelAjax}. Este atraso era causado devido à grande 
 quantidade de atualizações de páginas inteiras necessárias no ciclo síncrono, demonstrado na Figura \ref{fig:arquitetura_web_tradicional}. 
 
@@ -55,7 +55,7 @@ contendo a página exata que será exibida no \textit{browser} do cliente. Esse 
 os usuários ``exigissem'' uma forma melhor de interagir com estas aplicações. 
 
 Para solucionar este problema de desempenho presente nas aplicações tradicionais, surgiu o modelo Ajax. Como descrito por \cite{garrettAjax}, uma 
-aplicação Ajax elimina a natureza de interação Web conhecida como \textit{start-stop-start-stop} introduzindo uma camada intermediária 
+aplicação Ajax elimina a natureza da interação Web conhecida como \textit{start-stop-start-stop} introduzindo uma camada intermediária 
 — \textit{Ajax Engine} — entre cliente e servidor. Essa camada permitiu a essas aplicações realizarem requisições ao servidor de forma assíncrona 
 e atualizar parcialmente a página ao receber a resposta, não impedindo a interação do usuário durante o ciclo de requisição/resposta. Na 
 Figura \ref{fig:ajax_comparison} podemos ver um comparativo entre aplicações Web síncronas e assíncronas.
@@ -71,7 +71,7 @@ Figura \ref{fig:ajax_comparison} podemos ver um comparativo entre aplicações W
 \end{figure}
 
 
-Com aplicações construídas utilizando Ajax, a Web voltou à ser atrativa para usuário e tem crescido o número de aplicações Web desde então. Segundo
+Com aplicações construídas utilizando Ajax, a Web voltou a ser atrativa para usuário e tem crescido o número de aplicações Web desde então. Segundo
 \cite{tabulaRest} as aplicações Web assumem atualmente uma importância sem precedentes em todas as áreas da sociedade. 
 
 \subsection{RESTful e Single Page Applications}
@@ -108,7 +108,7 @@ Devido a este aprimoramento constante no que diz respeito ao desenvolvimento de 
 de ser composta por grandes quantidades de códigos \textit{server-side}, onde todo o processamento é feito no servidor, os códigos são fechados e 
 o consumo de banda é maior aos proprietários do sistema, e passando a ter maior utilização de códigos \textit{client-side}, onde o processamento dos 
 \textit{scripts} da página ocorre na máquina do cliente e somente quando há necessidade de interação com o banco de dados são feitas requisições ao 
-servidor \cite{spa01}. Neste contexto surgiram as \textit{Single Page Applications} (SPA) definida por \cite{spa02} aplicações composta por somente 
+servidor \cite{spa01}. Neste contexto surgiram as \textit{Single Page Applications} (SPA) definidas por \cite{spa02} aplicações compostas por somente 
 uma página HTML, como base para todas as outras páginas Web da aplicação nas quais as interações feitas pelo usuário são implementadas usando 
 JavaScript, HTML e CSS. A Figura \ref{fig:spa} demonstra o funcionamento de uma SPA.
 
@@ -306,9 +306,9 @@ usuários podem cadastrar pontos em determinada rota, bastando clicar sobre ele 
 descrição. O sistema irá gerar automaticamente o endereço do ponto, conforme visto na Figura \ref{fig:cadastroPonto}. 
 
 O sistema inicialmente conta com 6 tipos de pontos, sendo eles: Natureza exuberante, pontos turísticos, estadia, restaurante, alerta e proibição. 
-Cada tipo possui um ícone que será exibido no mapa, facilitando ao usuário a identificação. Na interface de admnistração do sistema é possível 
-cadastrar novos tipos de pontos, conforme for necessário. Estes tipos de ponto iniciais do sistema foram levantados com o fornecedor de requisitos 
-como sendo os principais pontos de interesse para cicloturistas em uma rota.
+Cada tipo possui um ícone que será exibido no mapa, facilitando ao usuário a identificação. Na interface de administração do sistema é possível 
+cadastrar novos tipos de pontos, de acordo com a necessidade. Estes tipos de ponto iniciais do sistema foram levantados com o fornecedor de 
+requisitos como sendo os principais pontos de interesse para cicloturistas em uma rota.
 
 \begin{figure}[!ht]
 	\centering	
@@ -323,15 +323,15 @@ como sendo os principais pontos de interesse para cicloturistas em uma rota.
 
 \subsection{Comentários em Pontos e Rotas}
 Fóruns na Web geram uma grande quantidade de informações a partir da interação entre usuários. Pensando nisto, a aplicação Ciclotour conta com uma 
-sessão de comentários em Rotas e em Pontos, possibilitando o interação entre usuários e permitindo ao usuário expor suas observações e ponto de 
+seção de comentários em Rotas e em Pontos, possibilitando o interação entre usuários e permitindo ao usuário expor suas observações e ponto de 
 vista, desta forma gerando informações relativas a estes pontos e rotas que podem ser aproveitadas por outros usuários, além de ser um local onde 
 usuários podem tirar dúvidas com outros usuários que já realizaram tal rota ou passaram em tal ponto.
 
 \subsection{Buscar rotas}
 Ao entrar na página de buscas de rotas, serão exibidas as rotas cadastradas ordenadas por sua data de cadastro, exibindo as mais recentes.
-O Ciclotour possui a opção busca por rotas a partir de origem e destino, onde o usuário pode informar de onde deseja partir e até onde deseja chegar,
-e o sistema irá retornar as rotas já cadastradas que atendam à esta condição. Para esta funcionalidade, foi utilizado um raio de 5 km entre as 
-coordenadas do ponto de origem e destino informados pelo usuário. Ao informar origem e destino, o sistema automaticamente converte o texto em 
+O Ciclotour possui a opção busca por rotas a partir de origem e destino, na qual o usuário pode informar de onde deseja partir e até onde deseja 
+chegar, e o sistema irá retornar as rotas já cadastradas que atendam a esta condição. Para esta funcionalidade, foi utilizado um raio de 5 km entre 
+as coordenadas do ponto de origem e destino informados pelo usuário. Ao informar origem e destino, o sistema automaticamente converte o texto em 
 coordenadas utilizando a API do GoogleMaps, e realiza um cálculo de raio de 5 km e busca as rotas cadastradas que possuem seu primeiro e último ponto
 dentro do raio de 5km da origem e destino informadas pelo usuário respectivamente.
 
@@ -355,8 +355,8 @@ marcá-las como realizada e a quantidade de rotas pendentes e realizadas pelo us
 
 O Ciclotour permite relações de amizades entre usuários mediante solicitação. Usuários podem buscar por outros usuários através de seu nome, 
 sobrenome e e-mail e enviar solicitação de amizade a este usuário que pode ou não aceitá-la demonstrados na Figura \ref{fig:buscarUsuario} e na 
-Figura \ref{fig:solicitacaoAmizade}. A relação de amizade entre usuário permite que os mesmos vejam em seu \textit{feed} as atividades de seus amigos. O 
-Ciclotour também possui um contador de amizades que será exibido para outros usuários.
+Figura \ref{fig:solicitacaoAmizade}. A relação de amizade entre usuário permite que os mesmos vejam em seus \textit{feeds} as atividades de seus 
+amigos. O Ciclotour também possui um contador de amizades que será exibido para outros usuários.
 
 \begin{figure}[!ht]
 	\centering	
@@ -386,10 +386,10 @@ podem despertar interesse de outros cicloturistas pela rota, além de ser uma fo
 turísticos em outras redes sociais, sendo o Ciclotour uma rede social focada em turismo, este recurso é indispensável.
 
 \section{Conclusão}
-Este artigou apresentou a aplicação Ciclotour, uma rede social colaborativa para cicloturistas, cujo objetivo principal é oferecer a seus usuários 
-um local onde possam interagir com outros cicloturistas, compartilhar e encontrar informações que auxiliem o planejamento de suas atividade, 
-oferecendo recursos para atender as necessidades específicas deste meio, percebidas através deste trabalho e que ainda não foram exploradas por 
-outras aplicações.
+Este artigo apresentou a aplicação Ciclotour, uma rede social colaborativa para cicloturistas, cujo objetivo principal é oferecer a seus usuários 
+um local onde possam interagir com outros praticantes desta atividade, compartilhar e encontrar informações que auxiliem o planejamento de suas 
+atividades, oferecendo recursos para atender as necessidades específicas deste meio, percebidas através deste trabalho e que ainda não foram 
+exploradas por outras aplicações.
 
 Para trabalhos futuros na aplicação Ciclotour, pretende-se uma melhoria de \textit{design} para atender à requisitos de \textit{User Experience} (UX),
 que são fundamentais para sistemas no formato rede social. Além desta melhoria, pretendemos também passar a utilizar a extensão PostGIS no banco de 

@@ -342,7 +342,19 @@ O Ciclotour possui a opção busca por rotas a partir de origem e destino, na qu
 chegar, e o sistema irá retornar as rotas já cadastradas que atendam a esta condição. Para esta funcionalidade, foi utilizado um raio de 5 km entre 
 as coordenadas do ponto de origem e destino informados pelo usuário. Ao informar origem e destino, o sistema automaticamente converte o texto em 
 coordenadas utilizando a API do GoogleMaps, e realiza um cálculo de raio de 5 km e busca as rotas cadastradas que possuem seu primeiro e último ponto
-dentro do raio de 5km da origem e destino informadas pelo usuário respectivamente.
+dentro do raio de 5km da origem e destino informadas pelo usuário respectivamente. Esta funcionalidade pode ser vista na Figura \ref{fig:buscarRotas}.
+
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Buscar Rotas.]
+	{Página de onde são exibidas as rotas que atendam a busca realizada}
+	  \vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/buscarRotas.png}
+	 \vspace{0cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:buscarRotas}
+\end{figure}
 
 \subsection{Marcar rotas como realizadas ou pendentes}
 A aplicação Ciclotour permite ao usuário marcar as rotas como realizadas ou pendentes conforme a Figura \ref{fig:marcarRota}, possibilitando organizar
@@ -392,7 +404,22 @@ amigos. O Ciclotour também possui um contador de amizades que será exibido par
 \subsection{Adicionar fotos em rotas}
 Se tratando de uma aplicação voltada ao turismo, é importante que usuários possam compartilhar fotos de suas atividades com outros usuários. Fotos 
 podem despertar interesse de outros cicloturistas pela rota, além de ser uma fonte de informação. É muito comum usuários postarem fotos em pontos 
-turísticos em outras redes sociais, sendo o Ciclotour uma rede social focada em turismo, este recurso é indispensável.
+turísticos em outras redes sociais, sendo o Ciclotour uma rede social focada em turismo, este recurso é indispensável. Para acessá-lo, basta buscar
+pela rota que deseja adicionar a foto, clicar no botão "Adicionar Foto" que pode ser visto na Figura \ref{fig:marcarRota}, então abrirá um 
+\textit{popup} onde o usuário poderá fazer o \textit{upload} da imagem desejada, além de informar uma descrição para a mesma. Após enviar a foto,
+a mesma será adicionada nas imagens da rota, de forma que os usuários que tem permissão para acessar esta rota poderão visualizá-la conforme 
+Figura \ref{fig:fotosRota}. Ao clicar sobre a imagem, a mesma é ampliada e é possível ver a descrição informada pelo usuário que a enviou.
+
+\begin{figure}[!ht]
+	\centering	
+	\caption[\hspace{0.1cm} Fotos da Rota.]
+	{Página de onde são exibidas as fotos de uma rota}
+	  \vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/fotosRota.png}
+	 \vspace{0cm}
+	\\\textbf{\footnotesize Fonte: Elaborado pelo autor}
+	\label{fig:fotosRota}
+\end{figure}
 
 \section{\esp Conclusão}
 Este artigo apresentou a aplicação Ciclotour, uma rede social colaborativa para cicloturistas, cujo objetivo principal é oferecer a seus usuários 

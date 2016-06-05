@@ -130,7 +130,7 @@ Uma das vantagens da adoção deste modelo em relação ao modelo anterior é em
 mais leve e permite melhor usabilidade para o usuário final, devido ao AJAX não bloquear a manipulação da página durante sua execução \cite{spa01}, 
 além de facilitar a portabilidade da aplicação pois este modelo requer uma API \textit{server-side} robusta e bem estruturada para funcionar.
 
-\section{Trabalhos Relacionados}
+\section{\esp Trabalhos Relacionados}
 \subsection{Runtastic}
 A rede Runtastic \cite{runtastic}, reúne várias modalidades de esportes como ciclismo, corrida ou triatletismo. Oferece a seus usuários a
 possibilidade de registrar suas atividades e performace obtida, com propósito de montar estatísticas que podem ser compartilhadas com seus amigos e
@@ -180,7 +180,7 @@ No Quadro 1 podemos ver um quadro comparativo entre as funções do Ciclotour e 
 	{\footnotesize\\ \textbf{Fonte: Elaborado pelo autor}}
    \end{center}
 
-\section{Metodologia}
+\section{\esp Metodologia}
 O ciclo de desenvolvimento da aplicação Ciclotour foi dividido nas seguintes fases: Coleta inicial de requisitos, teste de aceitação via 
 \textit{mockup} por parte do fornecedor de requisitos, implementação das \textit{features} aceitas e teste final de aceitação. Para isso 
 o desenvolvimento do Ciclotour contou com uma abordagem \textit{top-down}. Nesta abordagem o \textit{front-end} é construído antes do 
@@ -188,25 +188,29 @@ o desenvolvimento do Ciclotour contou com uma abordagem \textit{top-down}. Nesta
 \textit{mockup} de como seria a usabilidade de cada tela do sistema, sem necessidade de implementar toda a aplicação. Assim, o ``custo'' de mudanças 
 é reduzido, pois além do que foi contruído ter passado por uma pré-aprovação do fornecedor de requisitos, o maior custo de mudanças se dá em 
 alterações de modelos de banco de dados, que só será implementado após aprovação, evitando que sejam necessárias este tipo de mudança. Desta forma é 
-possível evitar retrabalho. Nos próximos parágrafos serão descritas as fases do ciclo de desenvolvimento da aplicação Ciclotour.
+possível evitar retrabalho. Nas próximas sessões serão descritas as fases do ciclo de desenvolvimento da aplicação Ciclotour.
 
+\subsection{Coleta inicial de requisitos}
 Na fase de coleta inicial de requisitos, foi realizada uma reunião com cicloturistas que são os principais fornecedores de requisitos para a 
 aplicação. Nesta fase, foram expostos os principais problemas enfrentados pelos fornecedores durante o planejamento de sua atividade, as 
 ferramentas que eram utilizadas para auxiliar na solução destes problemas, além de informações que os fornecedores de requisitos tinham maior
 dificuldade de encontrar. Após esta reunião, foram executadas análises destes requisitos e gerada uma proposta inicial de solução que foi apresentada
-ao envolvidos. Após a aprovação desta proposta, iniciou-se a contrução do \textit{mockup} que será utilizado na próxima fase.
+aos envolvidos. Após a aprovação desta proposta, iniciou-se a contrução do \textit{mockup} que será utilizado na próxima fase.
 
+\subsection{Teste de aceitação do Mockup}
 Após finalizar a construção do \textit{mockup} onde é possível interagir de forma prototipada com o sistema, percebendo o funcionamento das 
 \textit{features} envolvidas, usabilidade e o \textit{workflow} de como será o sistema, é realizado um teste de aceitação por parte dos 
 cicloturistas envolvidos no projeto para antecipar o \textit{feedback} em relação às mudanças necessárias, com o objetivo de adequar a aplicação às 
-espectaticas do usuário. Esta fase foi executadas em várias iterações, até que o \textit{mockup} fosse totalmente aprovado pelos fornecedores de 
+espectaticas do usuário. Esta fase foi executada em várias iterações, até que o \textit{mockup} fosse totalmente aprovado pelos fornecedores de 
 requisitos e só então começar a construção do \textit{backend}.
 
+\subsection{Implementação das features aceitas}
 Tendo um protótipo aprovado, iniciou-se a fase de implementação das \textit{features} do Ciclotour. Nesta fase, foi utilizada a técnica conhecida 
 como \textit{Test Driven Development} (TDD). Esta técnica tem como princípio o desenvolvimento guiado por testes, visando garantir que o que foi 
 desenvolvido está correto, evitando assim retrabalho. Utilizando esta técnica é possível garantir a conformidade com requisitos e prevenção de 
 \textit{bugs} que possam surgir. 
 
+\subsection{Teste final de aceitação}
 Cada \textit{feature} implementada gerou um \textit{deploy} da aplicação para o servidor, onde foi possível que os fornecedores de requisitos testassem
 e retornassem um \textit{feedback} o quanto antes, evitando maiores impactos por conta de mudanças necessárias. Essa fase junto à fase de 
 implementação ocorreu de forma interativa, até que o sistema estivesse totalmente construído.
@@ -214,9 +218,9 @@ implementação ocorreu de forma interativa, até que o sistema estivesse totalm
 Este ciclo de desenvolvimento foi escolhido para o desenvolvimento da aplicação Ciclotour pois desta forma foi possível minimizar o retrabalho ao 
 máximo, o que no caso deste trabalho era de extrema importância devido ao curto período de tempo disponível para realiza-lo. 
 
-\section{\esp Ferramentas}
+\subsection{Ferramentas}
 
-\subsection{Servidor}
+\subsubsection{Servidor}
 Para desenvolver o \textit{server-side} da aplicação Ciclotour, foram utilizados o \textit{framework} Python de desenvolvimento Web Django com a 
 extensão Django REST Framework para construção de \textit{Web Services}. O Django utiliza um estilo arquitetural baseado no 
 \textit{Model-View-Controller} (MVC), o \textit{Model-View-Template} (MVT). Na aplicação Ciclotour, o Django é responsável por processar a 
@@ -225,7 +229,7 @@ manter uma interface de administração do sistema e manter os modelos do sistem
 As requisições posteriores enviadas ao servidor serão requisições de dados que serão processadas e respondidas pelo Django REST \textit{framework} 
 em formato \textit{JavaScript Object Notation} (JSON).
 
-\subsection{Cliente}
+\subsubsection{Cliente}
 Para desenvolver o \textit{client-side} da aplicação Ciclotour foram utilizados o \textit{framework} JavaScript AngularJS e o \textit{framework} 
 CSS Bootsrap, além da API JavaScript do GoogleMaps. O AngularJS tem como propósito permitir a construção de elementos \textit{client-side} de forma 
 declarativa, através de suas diretivas. Este \textit{framework} também adota o estilo arquitetural MVC, além de prover uma abstração para as chamadas
@@ -237,7 +241,7 @@ final do sistema. Para prover recursos geográficos que possibilitem interação
 Javascript de mapas do Google, o GoogleMaps, que oferece recursos gráficos para renderização de mapas interativos, além de recursos para obter menor 
 distância entre pontos e diversos recursos geográficos.
 
-\section{Aplicação Ciclotour}
+\section{\esp Aplicação Ciclotour}
 O Ciclotour foi desenvolvido com o principal objetivo de atender às demandas específicas percebidas no meio do cicloturismo, uma atividade que exige
 um extenso planejamento por parte do praticante e que carece de meios de informações focados em suas atividades. Os requisitos para esta aplicação
 são: A aplicação deve ser construída em formato rede social 100\% focada em cicloturismo, com o propósito de centralizar informações sobre 
@@ -385,7 +389,7 @@ Se tratando de uma aplicação voltada ao turismo, é importante que usuários p
 podem despertar interesse de outros cicloturistas pela rota, além de ser uma fonte de informação. É muito comum usuários postarem fotos em pontos 
 turísticos em outras redes sociais, sendo o Ciclotour uma rede social focada em turismo, este recurso é indispensável.
 
-\section{Conclusão}
+\section{\esp Conclusão}
 Este artigo apresentou a aplicação Ciclotour, uma rede social colaborativa para cicloturistas, cujo objetivo principal é oferecer a seus usuários 
 um local onde possam interagir com outros praticantes desta atividade, compartilhar e encontrar informações que auxiliem o planejamento de suas 
 atividades, oferecendo recursos para atender as necessidades específicas deste meio, percebidas através deste trabalho e que ainda não foram 

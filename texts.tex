@@ -202,14 +202,14 @@ ferramentas que eram utilizadas para auxiliar na solução destes problemas, al�
 dificuldade de encontrar. Após esta reunião, foram executadas análises destes requisitos e gerada uma proposta inicial de solução que foi apresentada
 aos envolvidos. Após a aprovação desta proposta, iniciou-se a contrução do \textit{mockup} que será utilizado na próxima fase.
 
-\subsection{Teste de aceitação do Mockup}
+\subsection{Teste de aceitação do \textit{Mockup}}
 Após finalizar a construção do \textit{mockup} onde é possível interagir de forma prototipada com o sistema, percebendo o funcionamento das 
 \textit{features} envolvidas, usabilidade e o \textit{workflow} de como será o sistema, é realizado um teste de aceitação por parte dos 
 cicloturistas envolvidos no projeto para antecipar o \textit{feedback} em relação às mudanças necessárias, com o objetivo de adequar a aplicação às 
 espectaticas do usuário. Esta fase foi executada em várias iterações, até que o \textit{mockup} fosse totalmente aprovado pelos fornecedores de 
 requisitos e só então começar a construção do \textit{backend}.
 
-\subsection{Implementação das features aceitas}
+\subsection{Implementação das \textit{features} aceitas}
 Tendo um protótipo aprovado, iniciou-se a fase de implementação das \textit{features} do Ciclotour. Nesta fase, foi utilizada a técnica conhecida 
 como \textit{Test Driven Development} (TDD). Esta técnica tem como princípio o desenvolvimento guiado por testes, visando garantir que o que foi 
 desenvolvido está correto, evitando assim retrabalho. Utilizando esta técnica é possível garantir a conformidade com requisitos e prevenção de 
@@ -342,8 +342,9 @@ O Ciclotour possui a opção busca por rotas a partir de origem e destino, na qu
 chegar, e o sistema irá retornar as rotas já cadastradas que atendam a esta condição. Para esta funcionalidade, foi utilizado um raio de 5 km entre 
 as coordenadas do ponto de origem e destino informados pelo usuário. Ao informar origem e destino, o sistema automaticamente converte o texto em 
 coordenadas utilizando a API do GoogleMaps, e realiza um cálculo de raio de 5 km e busca as rotas cadastradas que possuem seu primeiro e último ponto
-dentro do raio de 5km da origem e destino informadas pelo usuário respectivamente. Esta funcionalidade pode ser vista na Figura \ref{fig:buscarRotas}.
-
+dentro do raio de 5km da origem e destino informadas pelo usuário respectivamente. Este cálculo foi feito utilizando a equação matemática reduzida da 
+circunferência e foi necessário descobrir a correspondência de latitude/longitude em quilometros para implementá-lo. Esta funcionalidade pode ser 
+vista na Figura \ref{fig:buscarRotas}.
 
 \begin{figure}[!ht]
 	\centering	
@@ -441,21 +442,23 @@ oferecendo recursos para atender as necessidades específicas deste meio percebi
 outras aplicações.
 
 Para atingir estes objetivos, foi necessário mesclar recursos das aplicações voltadas a prática esportiva, especificamente o ciclismo utilizadas pelos
-cicloturistas, com recursos interessantes para prática do turísmo. Esta aplicação foi desenvolvida no formato de \textit{Single Page Application}, 
+cicloturistas, com recursos interessantes para prática do turismo. Esta aplicação foi desenvolvida no formato de \textit{Single Page Application}, 
 seguindo as novas tendências das redes sociais modernas como o Facebook e o Instagram e que melhoram a experiência do usuário utilizando a aplicação.
 
 Dado o tempo para o desenvolvimento da aplicação, o foco foi desenvolver uma primeira versão que implementasse as \textit{features} mais essenciais
-de forma que usuários já pudessem utilizá-la para resolver o problema proposto, porém preparada para receber extensões que agregariam nas 
-possibilidades do sistema e até  na melhoria da usabilidade da aplicação. Estas extensões e melhorias estão previstas para trabalhos futuros, dado
-que o necessário para que usuários utilizem o sistema já está implementado. 
+com uma interface gráfica básica, de forma que usuários já pudessem utilizá-la para resolver o problema proposto, porém preparada para receber 
+extensões que agregariam nas possibilidades do sistema e até  na melhoria da usabilidade da aplicação. Estas extensões e melhorias estão previstas 
+para trabalhos futuros, dado que o necessário para que usuários utilizem o sistema já está implementado. 
 
 Como trabalhos futuros na aplicação Ciclotour, pretende-se uma melhoria de \textit{design} para atender à requisitos de \textit{User Experience} (UX), 
 que são fundamentais para sistemas no formato rede social, por exemplo, melhoria na visualização dos mapas através de um replanejamento das 
-interfaces da aplicação e melhoria no feedback para o usuário, com mensagens mais detalhadas sobre falhas, alertas e sucesso. Além desta melhoria, 
-pretendemos também passar a utilizar a extensão para trabalhar com dados geográficos no banco de dados da aplicação, o PostGIS, para melhorar o 
-gerenciamento de dados geográficos, com esta mudança será possível oferecer ainda mais recursos geográficos na aplicação e melhorar os que já são 
-oferecidos, visto que esta extensão permite trabalhar com dados geográficos com maior precisão além de oferecer recursos de relações topológicas que 
-SGBDs convencionais não oferecem.
+interfaces da aplicação e melhoria no \textit{feedback} para o usuário, com mensagens mais detalhadas sobre falhas, alertas e sucesso. Além desta 
+melhoria, pretendemos também passar a utilizar a extensão para trabalhar com dados geográficos no banco de dados da aplicação, o PostGIS, para 
+melhorar o gerenciamento deste tipo de dados, com esta mudança será possível oferecer ainda mais recursos geográficos na aplicação e melhorar os 
+que já são oferecidos, visto que esta extensão permite trabalhar com dados geográficos com maior precisão além de oferecer recursos de relações 
+topológicas que SGBDs convencionais não oferecem. Pretendemos também construir um aplicativo \textit{mobile} para ampliar as possibilidades da rede, 
+permitindo a utilização de recursos desta plataforma, como o GPS, integrados às funcionalidades da aplicação. Está previsto também a implementação de 
+uma \textit{feature} que inclua informações sobre climas e marés nas rotas, pois estas informações são fundamentais para alguns tipos de trajetos.
 
 
 
